@@ -1,0 +1,53 @@
+{
+  "name": "yarn",
+  "installationMethod": "msi",
+  "version": "1.16.0",
+  "license": "BSD-2-Clause",
+  "preferGlobal": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "setupFiles": [
+      "./src/setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "description": "📦🐈 Fast, reliable, and secure dependency management.",
+  "resolutions": {
+    "sshpk": "^1.14.2"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": "yarnpkg/yarn",
+  "bin": {
+    "yarn": "./bin/yarn.js",
+    "yarnpkg": "./bin/yarn.js"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.2",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.4.5",
+    "faker": "^4.1.0",
+    "puppeteer": "^1.16.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
